@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Release" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="tsundrain/tsundrain.vcxproj" Id="61133f25-6f02-4dff-ac5c-49d0581401d6" />
+</Solution>
