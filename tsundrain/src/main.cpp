@@ -13,7 +13,7 @@ int main( )
 	}
 
 	print( "+", "attached (pid: %u)", g->m_memory.pid( ) );
-	print( "~", "brute forcing memory..." );
+	print( "~", "scanning memory..." );
 
 	const auto tokens = g->m_discord.find_tokens( );
 	const auto usernames = g->m_discord.find_usernames( );
