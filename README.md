@@ -2,16 +2,17 @@
 
 external Discord token grabber via process memory scanning.
 
-attaches to `Discord.exe` and brute forces every committed memory region, scanning for anything that matches Discord's token format or JSON profile fields like `username`. Tokens are validated by base64 decoding the first segment and checking for a numeric user ID.
+all this does is attache to `Discord.exe` and brute forces all of its memory for Discord's token format or JSON profile fields like `username`, tokens are validated by base64 decoding the first segment and checking for a numeric user ID
 
 ## Why memory scanning?
 
-most token grabbers read Discord's LevelDB files on disk under %appdata%. This works but it's well known at this point, antivirus's and Discord both watch those paths, and tokens on disk may be encrypted.
+most token grabbers read Discord's LevelDB files on disk under %appdata%. This works but it's well known at this point, antivirus's and Discord both watch those paths, and tokens on disk may be encrypted
 
-memory scanning avoids all of this. Discord needs the token in memory to make requests, so it's always sitting there in plaintext regardless of how it's stored on disk. The tradeoff is Discord has to be running, but that's rarely an issue in practice.
-## Usage
+memory scanning avoids all of this. Discord needs the token in memory to make requests, so it's always sitting there in plaintext regardless of how it's stored on disk, the tradeoff is Discord has to be running, but that rarely matters in practice
 
-self explanatory, just run tsundrain while Discord is open.
+## Disclaimer
+
+This project is a proof of concept built for educational purposes and personal interest in malware development techniques. It is not intended for deployment or malicious use. You assume full responsibility for how you use this software. The author accepts no liability for misuse.
 
 ### Console output
 
@@ -45,7 +46,3 @@ src/
     └── memory/
         └── memory.cpp
 ```
-
-## Disclaimer
-
-This project is a proof of concept for educational purposes only. It is not intended for malicious use. The author is not responsible for any misuse of this software.
