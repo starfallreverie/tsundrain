@@ -1,7 +1,5 @@
 # tsundrain
 
-external Discord token grabber via process memory scanning.
-
 all this does is attache to `Discord.exe` and brute forces all of its memory for Discord's token format or JSON profile fields like `username`, tokens are validated by base64 decoding the first segment and checking for a numeric user ID
 
 ## Why memory scanning?
